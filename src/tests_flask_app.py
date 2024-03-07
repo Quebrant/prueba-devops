@@ -1,4 +1,5 @@
-# import pytest
+"""Module providing servicesgit ."""
+import pytest
 
 from app import app  # Flask instance of the API
 
