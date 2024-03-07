@@ -1,10 +1,11 @@
-"""Module providing servicesgit ."""
-import pytest
+"""Module providing services"""
+# import pytest
 
 from app import app  # Flask instance of the API
 
 
 def test_index_route():
+    """Module providing services"""
     response = app.test_client().get('/status')
 
     assert response.status_code == 200
