@@ -1,11 +1,11 @@
-from flask import Flask, render_template
-from datetime import datetime
 import locale
+import Flask, render_template from flask 
+import datetime from datetime 
 
 app = Flask(__name__)
 locale.setlocale(locale.LC_TIME, '')
 
-
+"""Module providing dates"""
 @app.route('/')
 def homepage():
     the_time = datetime.now().strftime("%A, %D %B %Y %H:%M")
