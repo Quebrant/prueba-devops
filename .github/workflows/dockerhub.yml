@@ -28,7 +28,7 @@ jobs:
         with:
           context: .
           push: true 
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/galeria:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/prueba-devops:latest
 
   aws:
     name: Deploy image to aws
