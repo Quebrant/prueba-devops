@@ -1,14 +1,15 @@
+from flask import Flask, render_template
+from datetime import datetime
 import locale
-from flask import Flask, render_template 
-from datetime import datetime 
 
 app = Flask(__name__)
 locale.setlocale(locale.LC_TIME, '')
 
-"""Module providing dates"""
+
 @app.route('/')
 def homepage():
-    the_time = datetime.now().strftime("%A, %D %B %Y %H:%M")
+    x = "variable no usada para error linter"
+    the_time = datetime.now().strftime("%A, %d %b %Y %H:%M")
 
     # Render HTML with variable
     return render_template("index.html", the_time=the_time, tema="dogs")
