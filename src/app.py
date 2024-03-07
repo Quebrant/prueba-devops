@@ -1,14 +1,16 @@
+"Importamos datetime"
+from datetime import datetime
 import locale
 from flask import Flask, render_template
-from datetime import datetime
 
 app = Flask(__name__)
 locale.setlocale(locale.LC_TIME, '')
 
 
+
 @app.route('/')
 def homepage():
-    x = "variable no usada para error linter"
+    "Conseguimos la hora"
     the_time = datetime.now().strftime("%A, %d %b %Y %H:%M")
 
     # Render HTML with variable
@@ -18,6 +20,7 @@ def homepage():
 
 @app.route('/status')
 def status():
+    "Devolvemos la respuesta"
     return "OK Todo"
 
 
